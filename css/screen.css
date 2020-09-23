@@ -2,6 +2,18 @@
 #FONTS
 \*------------------------------------*/
 
+@font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    src: url("../fonts/Inter-Regular.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 600;
+    src: url("../fonts/Inter-SemiBold.woff2") format("woff2")
+}
+
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
@@ -26,11 +38,11 @@ html {
     font-size: 16px;
     line-height: 1.5;
     font-family: Helvetica, arial, sans-serif;
-    color: grey;
+    color: #20223a;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #F5F6FA;
 }
 
 *,
@@ -47,13 +59,13 @@ html {
 */
 
 ::-moz-selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
 
 ::selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
@@ -158,18 +170,23 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color: #3385FF;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #6c37e9;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color: #4bd3f5;
+}
+
+label,
+input {
+    display: block;
 }
 
 /*------------------------------------*\
@@ -438,11 +455,44 @@ a:focus {
     Card with box shadow
 */
 
+.c-card{
+    background-color: #FFFFFF;
+    border: #00000005 solid 1px;
+    border-radius: 3px;
+    box-shadow: 0 2 4 #00000007;
+}
+
+.c-card__body{
+    padding: 48px;
+}
+
+.c-card__title{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    margin-top: 48px;
+    margin-bottom: 0px;
+
+}
+
+.c-card__footer{
+    display: flex;
+    justify-content: center;
+    border-top: #E2E3E7 1px solid;
+    padding-top: 24px;
+}
+
 /*
     Component: Forms
     ---
     Everything form related here
 */
+.c-form-field--option{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /*
     Component: Input
@@ -451,10 +501,27 @@ a:focus {
 */
 
 .c-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
+    width: 100%;
+    border: #E2E3E7 solid 1px;
+    border-radius: 3px;
+    
+    font-family: inherit;
+    color: #B5B6C0;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px;
+
+    outline: none;
 }
 
 .c-input:focus {
+    border-color: #4f95ff;
+    box-shadow: h-offset v-offset blur spread color;
+    box-shadow: 0 0 5px 3px #3385ff4d; 
 }
 
 /*
@@ -480,23 +547,70 @@ a:focus {
 */
 
 .c-button {
-
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border: solid #2E77E6 1px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    background-color: #3385FF;
+    padding: 14px;
+    transition: 0.3s;
 }
 
 .c-button:hover {
-
+    cursor: pointer;
+    box-shadow: h-offset v-offset blur spread color;
+    box-shadow: 0 0 5px 3px #3385ff4d;
 }
 
 .c-button:focus {
-
+    outline: none;
+    background-color: #5294f7;
+    box-shadow: h-offset v-offset blur spread color;
+    box-shadow: 0 0 5px 3px #3385ff4d;
 }
 
 .c-button:active {
-
+    outline: none;
+    background-color: #0066ff;
+    border-color: #015be2;
+    
 }
 
 .c-button--block {
 
+}
+
+/*
+    Component: Logo
+    ---
+    Class to put on logo h1
+*/
+
+.c-logo{
+    display: flex;
+    height: 24px;
+    justify-content: center;
+}
+
+.c-logo__symbol{
+    display: block;
+    height: 100%;
+}
+
+.c-logo__path--1{
+    fill: #20223A;
+}
+
+.c-logo__path--2{
+    fill: #3385FF;
+}
+
+.c-logo__path--3{
+    fill: #1B4186;
 }
 
 /*------------------------------------*\
