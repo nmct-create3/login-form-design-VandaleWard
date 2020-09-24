@@ -444,10 +444,17 @@ input {
 \*------------------------------------*/
 
 /*
-    Component: Logo
+    Component: Forgot Password
     ---
-    Website main logo
+    Forgot Password
 */
+
+.c-fp{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    margin-top: -12px;
+}
 
 /*
     Component: Card
@@ -482,6 +489,7 @@ input {
     justify-content: center;
     border-top: #E2E3E7 1px solid;
     padding-top: 24px;
+    font-size: 14px;
 }
 
 /*
@@ -531,7 +539,15 @@ input {
 */
 
 .c-label {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    color: #606274;
+}
 
+.c-label--option{
+    margin-bottom: 0px;
+    margin-left: 8px;
 }
 
 /* If a input is focused within the form-field class change te color of the label */
@@ -629,6 +645,14 @@ input {
 
 .u-color-neutral-dark {
     color: Black;
+}
+
+.u-color-link {
+    color: #3385FF;
+}
+
+.u-color-footer{
+    color: #757787;
 }
 
 /*
